@@ -38,60 +38,59 @@
 				</section>
 
 				<section >
-						<section id="principe_sommaire">
-							<h3>Principe et philosophie de React</h3>
-				      <p>Composants</p>
-	            <p>Isolation et testabilité</p>
-	            <p>DOM virtuel</p>
-	            <p>Etat et propriétés</p>
-	            <p>Composants présentationnels et Conteneurs</p>
-	            <p>Unidirectionnel</p>
-            </section>
-            <section id="principe_composants">
-            	<h2>Composants</h3>
-            	<p>
-            		Chaque élement de la page est représenté par un composant qui est un fichier javascript.
-            	</p>
-            	<p>
-            		On va faire de la composition et imbriquer les composants pour constituer la page
-            	</p>
-            </section>
-             <section id="principe_etat">
-            	<h2>Etat et propriétés</h3>
-            	<p>
-            		Chaque composant a un état qui va agir sur son rendu.
-            	</p>
-            	<p>
-            		Chaque composant peut aussi recevoir des propriétés qui peuvent agir sur son état.
-            	</p>
-            	<p>
-            		On aura donc une notion d'état global de l'application réprésentant tous les états des composants.
-            	</p>
-            </section>
-            <section id="principe_isolation_test">
-            	<h2>Isolation et testabilité</h3>
-            	<p>
-            		Comme chaque composant est un isolé, on peut tester plus facilement un code de test par composant.
-            	</p>
-            </section>
-            <section id="principe_dom_virtual">
-            	<h2>DOM virtuel</h3>
-            	<p>
-            		On ne manipule pas directement le DOM mais on va utiliser un DOM virtuel qui se chargera d'intervenir sur le DOM uniquement si il y a besoin.
-            	</p>
-            </section>
-            <section id="principe_presentation_conteneur">
-            	<h3>Composants présentationnels et Conteneurs</h3>
-            	<p>2 catégories de composants :</p>
-		          <h4>1 = Stateful / Conteneur / Applicatif</h4>
-		          <p>Spécifique à l’application, « connecté » à son état global, doté de gestionnaires d’événements spécifiques.</p>
-		          <h4>2 = Stateless / Composant « bête »</h4>
-		          <p>Générique et réutilisable, ne voit que les <em>props</em> qu’on lui passe, aucune logique applicative interne.</p>
-            </section>
-             <section id="principe_unidirectionel">
-            	<h3>Unidirectionnel</h3>
-            	<p>Flux dans un seul sens donc plus facile à débugger</p>
-            </section>
+					<section id="principe_sommaire">
+						<h2>Principe et philosophie de React</h2>
+		            </section>
+		            <section id="principe_composants">
+		            	<h2>Composants</h3>
+		            	<p>
+		            		Chaque élement de la page est un composant représenté par un fichier javascript.
+		            	</p>
+		            	<p>
+		            		On va faire de la composition et imbriquer les composants pour constituer la page
+		            	</p>
+		            </section>
+		             <section id="principe_etat">
+		            	<h2>Etat et propriétés</h3>
+		            	<p>
+		            		Chaque composant a un <strong>état</strong> qui va agir sur son rendu.
+		            	</p>
+		            	<p>
+		            		Chaque composant peut aussi recevoir des props qui peuvent agir sur son état.
+		            	</p>
+		            	<p>
+		            		On aura donc une notion d'état global de l'application réprésentant tous les états des composants.
+		            	</p>
+		            </section>
+		            <section id="principe_isolation_test">
+		            	<h2>Isolation et testabilité</h3>
+		            	<p>
+		            		Chaque composant est isolé et indépendant.
+		            	</p>
+		            	<p>
+		            		On peut donc écrire plus facilement un code de test par composant.
+		            	</p>
+		            </section>
+		            <section id="principe_dom_virtual">
+		            	<h2>DOM virtuel</h3>
+		            	<p>
+		            		On ne manipule pas directement le DOM.</p>
+		            	<p>
+		            		On va utiliser un DOM virtuel qui se chargera d'intervenir sur le DOM uniquement si il y a besoin.
+		            	</p>
+		            </section>
+		            <section id="principe_presentation_conteneur">
+		            	<h3>Composants présentationnels et Conteneurs</h3>
+		            	<p>2 catégories de composants :</p>
+				          <h4>1 = Stateful / Conteneur / Applicatif</h4>
+				          <p>Spécifique à l’application, « connecté » à son état global, doté de gestionnaires d’événements spécifiques.</p>
+				          <h4>2 = Stateless / Composant « bête »</h4>
+				          <p>Générique et réutilisable, ne voit que les <em>props</em> qu’on lui passe, aucune logique applicative interne.</p>
+		            </section>
+		             <section id="principe_unidirectionel">
+		            	<h3>Unidirectionnel</h3>
+		            	<p>Flux dans un seul sens donc plus facile à débugger</p>
+		            </section>
 				</section>
 
 				<section id="start_install">
@@ -100,7 +99,7 @@
 								Aller sur le site <a href="http://facebook.github.io/react/" target="_blank">facebook.github.io/react</a>
 							</p>
 							<p>
-								Un kit Get Started peut être installé via npm.
+								Un kit "Get Started" peut être installé via npm.
 							</p>
 							<p>
 								<pre><code class="language-bash">npm install -g create-react-app
@@ -135,7 +134,7 @@ npm start</code></pre>
 					</section>
 
 					<section id="fonctionnement_component">
-						<h4>2 Techniques pour écrire un composants </h4>
+						<h3>Techniques pour écrire un composants </h3>
             <p>À l’ancienne : <a href="http://facebook.github.io/react/docs/component-specs.html" target="_blank"><code>React.createClass</code></a></p>
             <p>Désormais : <a href="http://facebook.github.io/react/docs/reusable-components.html#es6-classes" target="_blank">classes ES6</a></p>
 
@@ -190,16 +189,16 @@ export default IntroTexte ({ params }) => {
 					<section id="redux_comment">
 						<h2>Les éléments de Redux</h2>
 						<p>
-							Store : objet unique qui contient un objet "état global de l'application" et des reducers
+							<span class="fragment highlight-red visible">Store</span> : objet unique qui contient un objet "état global de l'application" et des reducers
 						</p>
 						<p>
-							Reducers : fonctions pures qui reçoit un état en paramètre et qui renvoie un nouvel état en paramètre
+							<span class="fragment highlight-red visible">Reducers</span> : fonctions pures qui reçoit un état en paramètre et qui renvoie un nouvel état en retour
 						</p>
 						<p>
-							Actions : fonctions qui renvoie un objet avec un type et d'autres valeurs qui vont servir aux reducers
+							<span class="fragment highlight-red visible">Actions</span> : fonctions qui renvoie un objet avec un type et d'autres valeurs qui vont servir aux reducers
 						</p>
 						<p>
-							Dispatch : fonction qui va permettre à l'UI d'appeler une action qui va déclencher l'appel à un réducer
+							<span class="fragment highlight-red visible">Dispatch</span>: fonction qui va permettre à l'UI d'appeler une action qui va déclencher l'appel à un réducer
 						</p>
 					</section>
 					<section>
@@ -228,11 +227,8 @@ export default IntroTexte ({ params }) => {
 					<section id="environnement_fonctionnement">
 						<h2>Comment ça fonctionne ?</h2>
 					</section>
-					<section id="environnement_build">
-						<h2>Build</h2>
-					</section>
 					<section id="environnement_pourquoi_build">
-						<h2>Pourquoi un build ?</h2>
+						<h2>On va utiliser un build et pourquoi ?</h2>
             <p>Un seul fichier JS, c’est <strong>pourri pour le développement</strong></p>
             <p>Des tas de fichiers JS, c’est <strong>pourri pour la production</strong></p>
             <p>JS 100% compatible browser = <strong>pas d’ES6+</strong></p>
@@ -265,17 +261,17 @@ export default IntroTexte ({ params }) => {
 					<section id="rex_good">
 						<h2>Ce que j'ai aimé</h2>
 						<p>Pouvoir utiliser les nouvelles technos (ES6, webpack...)</p>
-						<p>Rafrachissement automatique</p>
+						<p>Rafraichissement automatique</p>
 						<p>Impression de faire du code compilé</p>
 						<p>Déboggage facile</p>
-						<p>Beaucoup de ressources</p>
+						<p>Beaucoup de ressources et plugins</p>
 						<p>Code en production propre</p>
 					</section>
 					<section id="rex_bad">
 						<h2>Ce que j'ai pas aimé</h2>
 						<p>packages non officielles</p>
 						<p>environnement à mettre en place</p>
-						<p>compliqué à utiliser plugin jquery</p>
+						<p>compliqué à utiliser librairie jquery</p>
 					</section>
 				</section>
 				<section>
