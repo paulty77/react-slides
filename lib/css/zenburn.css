@@ -5,76 +5,114 @@ based on dark.css by Ivan Sagalaev
 
 */
 
-.hljs {
+pre code {
   display: block;
   overflow-x: auto;
   padding: 0.5em;
   background: #3f3f3f;
   color: #dcdcdc;
+  -webkit-text-size-adjust: none;
 }
 
-.hljs-keyword,
-.hljs-selector-tag,
-.hljs-tag {
+pre .keyword,
+pre .tag,
+pre .css .class,
+pre .css .id,
+pre .lisp .title,
+pre .nginx .title,
+pre .request,
+pre .status,
+pre .clojure .attribute {
   color: #e3ceab;
 }
 
-.hljs-template-tag {
+pre .django .template_tag,
+pre .django .variable,
+pre .django .filter .argument {
   color: #dcdcdc;
 }
 
-.hljs-number {
+pre .number,
+pre .date {
   color: #8cd0d3;
 }
 
-.hljs-variable,
-.hljs-template-variable,
-.hljs-attribute {
+pre .dos .envvar,
+pre .dos .stream,
+pre .variable,
+pre .apache .sqbracket {
   color: #efdcbc;
 }
 
-.hljs-literal {
+pre .dos .flow,
+pre .diff .change,
+pre .python .exception,
+pre .python .built_in,
+pre .literal,
+pre .tex .special {
   color: #efefaf;
 }
 
-.hljs-subst {
+pre .diff .chunk,
+pre .subst {
   color: #8f8f8f;
 }
 
-.hljs-title,
-.hljs-name,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-section,
-.hljs-type {
+pre .dos .keyword,
+pre .decorator,
+pre .title,
+pre .type,
+pre .diff .header,
+pre .ruby .class .parent,
+pre .apache .tag,
+pre .nginx .built_in,
+pre .tex .command,
+pre .prompt {
   color: #efef8f;
 }
 
-.hljs-symbol,
-.hljs-bullet,
-.hljs-link {
+pre .dos .winutils,
+pre .ruby .symbol,
+pre .ruby .symbol .string,
+pre .ruby .string {
   color: #dca3a3;
 }
 
-.hljs-deletion,
-.hljs-string,
-.hljs-built_in,
-.hljs-builtin-name {
+pre .diff .deletion,
+pre .string,
+pre .tag .value,
+pre .preprocessor,
+pre .pragma,
+pre .built_in,
+pre .javadoc,
+pre .smalltalk .class,
+pre .smalltalk .localvars,
+pre .smalltalk .array,
+pre .css .rules .value,
+pre .attr_selector,
+pre .pseudo,
+pre .apache .cbracket,
+pre .tex .formula,
+pre .coffeescript .attribute {
   color: #cc9393;
 }
 
-.hljs-addition,
-.hljs-comment,
-.hljs-quote,
-.hljs-meta {
+pre .shebang,
+pre .diff .addition,
+pre .comment,
+pre .annotation,
+pre .pi,
+pre .doctype {
   color: #7f9f7f;
 }
 
-
-.hljs-emphasis {
-  font-style: italic;
+pre .coffeescript .javascript,
+pre .javascript .xml,
+pre .tex .formula,
+pre .xml .javascript,
+pre .xml .vbscript,
+pre .xml .css,
+pre .xml .cdata {
+  opacity: 0.5;
 }
 
-.hljs-strong {
-  font-weight: bold;
-}
