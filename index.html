@@ -1,0 +1,310 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Introduction React</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section id="intro">
+					<h1>React.js</h1>
+					<h3>Présentation</h3>
+				</section>
+
+				<section >
+						<section id="principe_sommaire">
+							<h3>Principe et philosophie de React</h3>
+				      <p>Composants</p>
+	            <p>Isolation et testabilité</p>
+	            <p>DOM virtuel</p>
+	            <p>Etat et propriétés</p>
+	            <p>Composants présentationnels et Conteneurs</p>
+	            <p>Unidirectionnel</p>
+            </section>
+            <section id="principe_composants">
+            	<h2>Composants</h3>
+            	<p>
+            		Chaque élement de la page est représenté par un composant qui est un fichier javascript.
+            	</p>
+            	<p>
+            		On va faire de la composition et imbriquer les composants pour constituer la page
+            	</p>
+            </section>
+             <section id="principe_etat">
+            	<h2>Etat et propriétés</h3>
+            	<p>
+            		Chaque composant a un état qui va agir sur son rendu.
+            	</p>
+            	<p>
+            		Chaque composant peut aussi recevoir des propriétés qui peuvent agir sur son état.
+            	</p>
+            	<p>
+            		On aura donc une notion d'état global de l'application réprésentant tous les états des composants.
+            	</p>
+            </section>
+            <section id="principe_isolation_test">
+            	<h2>Isolation et testabilité</h3>
+            	<p>
+            		Comme chaque composant est un isolé, on peut tester plus facilement un code de test par composant.
+            	</p>
+            </section>
+            <section id="principe_dom_virtual">
+            	<h2>DOM virtuel</h3>
+            	<p>
+            		On ne manipule pas directement le DOM mais on va utiliser un DOM virtuel qui se chargera d'intervenir sur le DOM uniquement si il y a besoin.
+            	</p>
+            </section>
+            <section id="principe_presentation_conteneur">
+            	<h3>Composants présentationnels et Conteneurs</h3>
+            	<p>2 catégories de composants :</p>
+		          <h4>1 = Stateful / Conteneur / Applicatif</h4>
+		          <p>Spécifique à l’application, « connecté » à son état global, doté de gestionnaires d’événements spécifiques.</p>
+		          <h4>2 = Stateless / Composant « bête »</h4>
+		          <p>Générique et réutilisable, ne voit que les <em>props</em> qu’on lui passe, aucune logique applicative interne.</p>
+            </section>
+             <section id="principe_unidirectionel">
+            	<h3>Unidirectionnel</h3>
+            	<p>Flux dans un seul sens donc plus facile à débugger</p>
+            </section>
+				</section>
+
+				<section id="start_install">
+							<h2>Comment commencer ?</h2>
+							<p>
+								Aller sur le site <a href="http://facebook.github.io/react/" target="_blank">facebook.github.io/react</a>
+							</p>
+							<p>
+								Un kit Get Started peut être installé via npm.
+							</p>
+							<p>
+								<pre><code class="language-bash">npm install -g create-react-app
+create-react-app my-app
+
+cd my-app
+npm start</code></pre>
+							</p>
+				</section>
+
+				<section>
+					<section id="fonctionnement_into">
+						<h2>Comment fonctionne React ?</h2>
+					</section>
+					<section id="fonctionnement_JSX">
+						<h2>JSX</h2>
+						<p>
+							On va écrire du langage ressemblant à du HTML dans le javascript.
+						</p>
+						<p>Syntaxe JSX:</p>
+					  <pre><code  data-trim class="hljs">
+										render () {
+										  return &lt;input type='email' name={name} /&gt;
+										}
+            </code></pre>
+            <p>Syntaxe javascript:</p>
+					  <pre><code  data-trim class="hljs">
+										render () {
+										  return React.createElement('input', { type: 'email', name })
+										}
+            </code></pre>
+					</section>
+
+					<section id="fonctionnement_component">
+						<h4>2 Techniques pour écrire un composants </h4>
+            <p>À l’ancienne : <a href="http://facebook.github.io/react/docs/component-specs.html" target="_blank"><code>React.createClass</code></a></p>
+            <p>Désormais : <a href="http://facebook.github.io/react/docs/reusable-components.html#es6-classes" target="_blank">classes ES6</a></p>
+
+            <pre><code class="language-js" data-trim>
+class LoginPage extends Component {
+  // …
+  render () { /* … */ }
+  // …
+}
+            </code></pre>
+
+            <p>Mais aussi : <a href="http://facebook.github.io/react/docs/reusable-components.html#stateless-functions" target="_blank">purs fonctionnels</a></p>
+
+            <pre><code class="language-js" data-trim>
+export default IntroTexte ({ params }) => {
+  // …
+}
+            </code></pre>
+
+            <p>Quelles différences ?   Lequel pour quoi ?</p>
+					</section>
+				</section>
+
+				<section>
+					<section id="start_code">
+						<h2>Commençons à coder ?</h2>
+					</section>
+					<section id="start_install_tools">
+						<h2>Déboggage</h2>
+						<p>Avant on va installer deux Dev Tools Chrome</p>
+						<p><a href="https://developer.chrome.com/devtools" target="_blank">Chrome Dev Tools</a></p>
+						<p><a href="https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd" target="_blank">Redux Dev Tools</a></p>
+					</section>
+				</section>
+
+				<section>
+					<section id="redux_titre">
+						<h2>Redux</h2>
+					</section>
+					<section id="redux_pourquoi">
+						<h2>Pourquoi Redux ?</h2>
+						<p>
+							Le bordel avec l'observation manuelle des états
+						</p>
+						<p>
+							Basé sur <a href="https://facebook.github.io/flux/" target="_blank">Flux</a> mise en place par Facebook
+						</p>
+						<p>
+							Site officiel très bien fait <a href="http://redux.js.org/">redux.js.org</a>
+						</p>
+					</section>
+					<section id="redux_comment">
+						<h2>Les éléments de Redux</h2>
+						<p>
+							Store : objet unique qui contient un objet "état global de l'application" et des reducers
+						</p>
+						<p>
+							Reducers : fonctions pures qui reçoit un état en paramètre et qui renvoie un nouvel état en paramètre
+						</p>
+						<p>
+							Actions : fonctions qui renvoie un objet avec un type et d'autres valeurs qui vont servir aux reducers
+						</p>
+						<p>
+							Dispatch : fonction qui va permettre à l'UI d'appeler une action qui va déclencher l'appel à un réducer
+						</p>
+					</section>
+					<section>
+						<h2>Codons</h2>
+					</section>
+					<section id="redux_flux_unique_1" data-transition="slide-in fade-out">
+            <h4>Le flux de Redux</h4>
+            <img src="images/redux-flow-1.png" />
+					</section>
+          <section id="redux_flux_unique_2" data-transition="fade-in slide-out">
+            <h4>Le flux de Redux</h4>
+            <img src="images/redux-flow-2.png" />
+          </section>
+				</section>
+
+				<section>
+					<section id="environnement_intro">
+						<h2>Comment on publie ?</h2>
+					</section>
+					<section id="environnement_publication">
+						<h3>Générer des fichiers pour la production</h3>
+						<p>
+							<pre><code class="language-bash">npm run build</code></pre>
+						</p>
+					</section>
+					<section id="environnement_fonctionnement">
+						<h2>Comment ça fonctionne ?</h2>
+					</section>
+					<section id="environnement_build">
+						<h2>Build</h2>
+					</section>
+					<section id="environnement_pourquoi_build">
+						<h2>Pourquoi un build ?</h2>
+            <p>Un seul fichier JS, c’est <strong>pourri pour le développement</strong></p>
+            <p>Des tas de fichiers JS, c’est <strong>pourri pour la production</strong></p>
+            <p>JS 100% compatible browser = <strong>pas d’ES6+</strong></p>
+            <p>CSS 100% compatible browser = <strong>pas de LESS, SASS, Stylus…</strong></p>
+            <p>Et <strong>l’optimisation</strong> des images, icônes, fontes…?</p>
+            <h3>Plein de transfos à faire…</h3>
+            <p>…alors on les <strong>automatise</strong> !</p>
+					</section>
+					<section id="environnement_webpack">
+						<h2>Webpack</h2>
+						<p>Très performant</p>
+						<p>Très flexible</p>
+						<p>Adapté et souvent associé à React</p>
+						<p>HMR</p>
+						<p>Tree shaking</p>
+					</section>
+					<section id="environnement_babel">
+						<h2>Babel</h2>
+						<p>Permet de transpiler du code ES6 en code javascript comprises par tous les navigateurs</p>
+						<p><a href="http://babeljs.io/">babeljs.io</a></p>
+					</section>
+					<section>
+						<h2>Démo</h2>
+					</section>
+				</section>
+				<section>
+					<section id="rex_retour_experience">
+						<h2>Retour d'expérience</h2>
+					</section>
+					<section id="rex_good">
+						<h2>Ce que j'ai aimé</h2>
+						<p>Pouvoir utiliser les nouvelles technos (ES6, webpack...)</p>
+						<p>Rafrachissement automatique</p>
+						<p>Impression de faire du code compilé</p>
+						<p>Déboggage facile</p>
+						<p>Beaucoup de ressources</p>
+						<p>Code en production propre</p>
+					</section>
+					<section id="rex_bad">
+						<h2>Ce que j'ai pas aimé</h2>
+						<p>packages non officielles</p>
+						<p>environnement à mettre en place</p>
+						<p>compliqué à utiliser plugin jquery</p>
+					</section>
+				</section>
+				<section>
+					<section id="suite_titre">
+						<h2>La suite</h2>
+					</section>
+					<section id="suite_content">
+						<h2>Quelles autres technos ?</h2>
+						<p><a href="https://vuejs.org/" target="_blank">Vue.js</a> : autre framework front qui commence à faire parler de lui</p>
+						<p><a href="https://angular.io/" target="_blank">Angular</a> : nouvelle version d'AngularJs</p>
+						<p><a href="https://facebook.github.io/react-native/" target="_blank">React Native</a> : pour faire du natif mobile
+					</section>
+				</section>
+				<section id="questions">
+					<h2>Questions ?<h2>
+				</section>
+				<section id="merci">
+					<h2>Merci de votre attention</h2>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
